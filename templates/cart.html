@@ -1,0 +1,38 @@
+<!-- templates/cart.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+</head>
+<body>
+    <h1>Your Cart</h1>
+
+    {% if cart %}
+        <ul>
+            {% for item in cart %}
+                <li>
+                    <img src="https://via.placeholder.com/100" alt="{{ item.name }}">
+                    <strong>{{ item.name }}</strong> - ₹{{ item.price }}
+                    
+                    <!-- Remove button -->
+                    <form action="{{ url_for('remove_from_cart', product_id=item.id) }}" method="post" style="display:inline;">
+                        <button type="submit">Remove</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <!-- ✅ Proceed to Checkout Button -->
+        <br>
+        <a href="{{ url_for('checkout') }}" style="display:inline-block; padding:10px 15px; background-color:#28a745; color:white; text-decoration:none; border-radius:5px;">
+            Proceed to Checkout
+        </a>
+
+    {% else %}
+        <p>Your cart is empty.</p>
+    {% endif %}
+
+    <br><br>
+    <a href="/">Continue Shopping</a>
+</body>
+</html>

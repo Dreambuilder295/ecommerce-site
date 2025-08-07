@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My E-Commerce Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- 🛒 Cart link added here -->
+    <a href="/cart">🛒 View Cart</a>
+
+    <h1>Products</h1>
+    <ul>
+        {% for product in products %}
+            <li>
+                <img src="https://via.placeholder.com/150" alt="{{ product.name }}">
+                <h3><a href="/product/{{ product.id }}">{{ product.name }}</a></h3>
+                <p>₹{{ product.price }}</p>
+                <p>{{ product.description }}</p>
+
+                <!-- ✅ Add to Cart form -->
+                <form action="/add-to-cart/{{ product.id }}" method="post">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

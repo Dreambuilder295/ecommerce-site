@@ -1,0 +1,4 @@
+@app.route('/place-order', methods=['POST'])
+def place_order():
+    session.pop('cart', None)
+    return render_template('thankyou.html')

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 1999,
+    "image": "headphones.jpg",
+    "description": "High-quality wireless headphones with noise cancellation."
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "price": 2999,
+    "image": "watch.jpg",
+    "description": "Track your fitness and receive notifications on the go."
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Speaker",
+    "price": 1499,
+    "image": "speaker.jpg",
+    "description": "Portable speaker with rich sound and long battery life."
+  },
+  {
+    "id": 4,
+    "name": "Stylish T-Shirt",
+    "price": 499,
+    "description": "High-quality cotton t-shirt with modern fit.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 5,
+    "name": "Casual Shoes",
+    "price": 1299,
+    "description": "Comfortable sneakers for everyday wear.",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 6,
+    "name": "Classic Watch",
+    "price": 1999,
+    "description": "Elegant wristwatch with leather strap.",
+    "image": "https://via.placeholder.com/150"
+  }
+]
